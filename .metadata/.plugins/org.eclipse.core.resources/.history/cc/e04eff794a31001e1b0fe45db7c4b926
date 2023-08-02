@@ -1,0 +1,6 @@
+package week1.day3.strategy;
+
+public class Lawnmower {
+	private double battery;
+	
+}

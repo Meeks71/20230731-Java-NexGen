@@ -1,0 +1,49 @@
+package week1.day2;
+
+public class Musician {
+
+	private String name;
+	private int age;
+	private Instrument instrument;
+
+	public Musician() {
+		super();
+	}
+
+	public Musician(String name, int age, Instrument instrument) {
+		super();
+		this.name = name;
+		this.age = age;
+		this.instrument = instrument;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public Instrument getInstrument() {
+		return instrument;
+	}
+
+	public void setInstrument(Instrument instrument) {
+		this.instrument = instrument;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		return this == obj; // comparing memory addresses
+	}
+
+}

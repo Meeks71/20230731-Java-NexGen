@@ -1,0 +1,21 @@
+package week1.day1.abstraction;
+
+public class Car implements Driveable {
+
+	@Override
+	public void drive() {
+		System.out.println("Vroom Vroom");
+	}
+
+	@Override
+	public void drive(int miles) {
+		System.out.println("Vroom Vroom x " + miles + " miles");
+	}
+
+	
+	public static void main(String[] args) {
+		Car car = new Car();
+		
+		
+	}
+}

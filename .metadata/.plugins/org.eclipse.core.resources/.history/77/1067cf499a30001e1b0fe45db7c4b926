@@ -1,0 +1,35 @@
+package week1.day2;
+
+import java.util.HashSet;
+
+public class Employee {
+
+	private long id;
+	private String name;
+	
+	public Employee(long id, String name) {
+		super();
+		this.id = id;
+		this.name = name;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		return this.id == ((Employee) obj).id;
+	}
+
+	public static void main(String[] args) {
+		Employee e1 = new Employee(1, "John");
+		Employee e2 = new Employee(2, "John");
+		Employee e3 = new Employee(3, "Mary");
+		Employee e4 = new Employee(3, "Mary");
+		//                 A4    B8
+		System.out.println(e3 == e4); // false
+		System.out.println(e3.equals(e4)); // true
+		
+		HashSet<Employee> emps = new HashSet<>();
+		emps.add(e3);
+		emps.add(e4);
+		System.out.println(emps);
+	}
+}

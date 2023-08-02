@@ -1,0 +1,55 @@
+package week1.day2.threading;
+
+import java.util.concurrent.atomic.AtomicInteger;
+
+public class ThreadCounting {
+	
+	static int count = 0;
+	static Object lock;
+	static AtomicInteger atomicCount = new AtomicInteger(0);
+
+	// Atomicity
+	// ACID compliance
+	public synchronized static void increment() { // Thread acquires lock
+		
+//		synchronized(lock) { // This is good for only synchronizing one section
+//			// Get the data and write it to the system logs
+//		}
+		
+		// ++ does
+		// Reads the value, increments the value by 1, updates the value of count
+		count++; // count = count + 1;
+		atomicCount.getAndIncrement(); // count++
+		atomicCount.incrementAndGet(); // ++count
+	} // Thread relinquishes lock
+	
+	public static void main(String[] args) {
+		Counter c1 = new Counter();
+		Counter c2 = new Counter();
+		
+		// Call the start method on them
+		c1.start();
+		c2.start();
+		
+		// This is the main thread/waiting room
+		try {
+			c1.join(); // Waiting for c1 to finish
+			c2.join(); // Waiting for c2 to finish
+		} catch (InterruptedException e) {
+			System.out.println("Thread interuppted");
+		}
+		
+		System.out.println(count); // Should be 20,000
+	}
+}
+
+class Counter extends Thread {
+	
+	@Override
+	public void run() {
+		// This is the method that determines the thread's logic/job
+		for (int i = 0; i < 10000; i++) {
+			ThreadCounting.increment();
+		}
+	}
+}

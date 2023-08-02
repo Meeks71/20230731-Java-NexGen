@@ -1,0 +1,9 @@
+package week1.day1.exceptions;
+
+public class ExceptionsPractice {
+
+	public ExceptionsPractice() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

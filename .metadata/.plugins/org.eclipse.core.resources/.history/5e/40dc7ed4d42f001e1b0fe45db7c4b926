@@ -1,0 +1,37 @@
+package week1.day1;
+
+/**
+ *
+ * public - Accessible anywhere (any package, class, etc.)
+ * protected - Available only to subclasses AND within the same package
+ * default - "Package Private" (Public within the same package, private anywhere else)
+ * private - Only available within the class
+ *
+ */
+
+public class Person {
+	 
+	// All properties should be private
+	 private String name;
+	 private int age;
+	 // Prevents modification
+	 public static final double PI = 3.14;
+	 
+	 // Getters (Read a value)
+	 // name -> getname -> getName
+	 
+	 // Setters (Write a value)
+}
+
+
+
+
+
+
+class A {
+	public static void main(String[] args) {
+		Person person = new Person();
+		System.out.println(person.name);
+		person.name = "joe";
+	}
+}

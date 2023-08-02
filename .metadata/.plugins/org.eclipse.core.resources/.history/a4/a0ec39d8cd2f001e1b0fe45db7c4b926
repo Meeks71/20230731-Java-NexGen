@@ -1,0 +1,15 @@
+package week1.day1.abstraction;
+
+public class Bicycle implements Driveable {
+
+	@Override
+	public void drive() {
+		System.out.println("Bring bring");
+	}
+
+	@Override
+	public void drive(int miles) {
+		// TODO Auto-generated method stub
+		
+	}
+}

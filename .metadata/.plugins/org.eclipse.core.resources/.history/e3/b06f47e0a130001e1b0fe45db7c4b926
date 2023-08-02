@@ -1,0 +1,40 @@
+package week1.day2.threading;
+
+public class ThreadCounting {
+	
+	static int count = 0;
+
+	public static void increment() {
+		count++;
+	}
+	
+	public static void main(String[] args) {
+		Counter c1 = new Counter();
+		Counter c2 = new Counter();
+		
+		// Call the start method on them
+		c1.start();
+		c2.start();
+		
+		// This is the main thread/waiting room
+//		try {
+//			c1.join(); // Waiting for c1 to finish
+//			c2.join(); // Waiting for c2 to finish
+//		} catch (InterruptedException e) {
+//			System.out.println("Thread interuppted");
+//		}
+		
+		System.out.println(count); // Should be 20,000
+	}
+}
+
+class Counter extends Thread {
+	
+	@Override
+	public void run() {
+		// This is the method that determines the thread's logic/job
+		for (int i = 0; i < 10000; i++) {
+			ThreadCounting.increment();
+		}
+	}
+}

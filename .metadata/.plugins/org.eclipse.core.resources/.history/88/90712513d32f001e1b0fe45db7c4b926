@@ -1,0 +1,13 @@
+package week1.day1;
+
+/**
+ *
+ * public - Accessible anywhere (any package, class, etc.)
+ * 
+ * private
+ *
+ */
+
+public class Person {
+	
+}

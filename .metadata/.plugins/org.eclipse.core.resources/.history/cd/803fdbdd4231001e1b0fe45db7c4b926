@@ -1,0 +1,16 @@
+package week1.day3;
+
+import java.util.concurrent.LinkedBlockingQueue;
+
+public class Restaurant {
+
+	public static void main(String[] args) {
+		LinkedBlockingQueue<String> expo = new LinkedBlockingQueue<>(10);
+		
+		Chef sarah = new Chef(expo, "Sarah", "Pancakes", 3000);
+		Chef tyler = new Chef(expo, "Tyler", "Chicken", 5000);
+		Chef sindhu = new Chef(expo, "Sindhu", "Briyani", 3000);
+		
+		Waiter tamara = new Waiter("Tamara", 4000, expo);
+	}
+}

@@ -1,0 +1,22 @@
+package week1.day1;
+
+/**
+ *
+ * public - Accessible anywhere (any package, class, etc.)
+ * 
+ * private - Only available within the class
+ *
+ */
+
+public class Person {
+	private String name;
+	
+	public static void main(String[] args) {
+		Person person = new Person();
+		System.out.println(person.name);
+	}
+}
+
+class A {
+	
+}

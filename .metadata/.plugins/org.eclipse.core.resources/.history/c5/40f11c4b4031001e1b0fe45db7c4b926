@@ -1,0 +1,16 @@
+package week1.day3;
+
+public class Waiter {
+
+	private String name;
+	private int deliveryTime;
+	
+	public Waiter() {
+		
+	}
+	
+	public Waiter(String name, int deliveryTime) {
+		this.name = name;
+		this.deliveryTime = deliveryTime;
+	}
+}

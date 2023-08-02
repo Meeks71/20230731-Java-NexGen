@@ -1,0 +1,8 @@
+package week1.day3;
+
+public class Chef {
+
+	private String name;
+	private String food;
+	private int cookTime;
+}

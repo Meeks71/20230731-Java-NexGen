@@ -1,0 +1,9 @@
+package week1.day1.exceptions;
+
+public class NameNotAllowedException extends Exception {
+
+	private static final long serialVersionUID = 7146612673097964777L;
+	
+	
+
+}

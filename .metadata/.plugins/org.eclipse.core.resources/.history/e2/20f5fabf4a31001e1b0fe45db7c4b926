@@ -1,0 +1,14 @@
+package week1.day3.strategy;
+
+public class Lawnmower {
+	private double battery;
+	private LawnmowerStrategy strategy;
+	
+	public void mow() {
+		strategy.mow();
+	}
+	
+	public void setBattery(double battery) {
+		this.battery = battery;
+	}
+}

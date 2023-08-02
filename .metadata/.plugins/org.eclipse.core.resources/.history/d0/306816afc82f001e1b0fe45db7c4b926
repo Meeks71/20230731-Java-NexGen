@@ -1,0 +1,8 @@
+package week1.day1.inheritance;
+
+public class Cat {
+
+	String name;
+	String breed;
+	int age;
+}

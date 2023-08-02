@@ -1,0 +1,28 @@
+package week1.day1.exceptions;
+
+public class NameNotAllowedException extends Exception {
+
+	private static final long serialVersionUID = 7146612673097964777L;
+	
+	public NameNotAllowedException() {
+		
+	}
+	
+	public NameNotAllowedException(String message) {
+		super(message); // new NameNotAllowedException("Message here")
+	}
+}
+
+
+class Test {
+	
+	public static void a() {
+		int x = 11;
+	}
+	
+	public static void main(String[] args) {
+		int x = 10;
+		a();
+		System.out.println(x);
+	}
+}

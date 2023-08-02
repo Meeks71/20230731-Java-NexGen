@@ -1,0 +1,36 @@
+package week1.day2;
+
+import java.util.HashSet;
+
+public class Instrument {
+
+	private String name;
+
+	public Instrument() {
+		super();
+	}
+
+	public Instrument(String name) {
+		super();
+		this.name = name;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public static void main(String[] args) {
+		HashSet<Musician> musicians = new HashSet<>();
+		Musician ringo = new Musician("Ringo Starr", 72, new Instrument("Drum"));
+		Musician ringo2 = new Musician("Ringo Starr", 72, new Instrument("Drum"));
+		musicians.add(ringo);
+		musicians.add(ringo2);
+		System.out.println(musicians);
+		
+		System.out.println(ringo.equals(ringo2));
+	}
+}

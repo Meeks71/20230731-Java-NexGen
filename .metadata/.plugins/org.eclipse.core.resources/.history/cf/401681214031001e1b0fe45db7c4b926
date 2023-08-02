@@ -1,0 +1,11 @@
+package week1.day3;
+
+public class Waiter {
+
+	private String name;
+	private int deliveryTime;
+	
+	public Waiter() {
+		
+	}
+}

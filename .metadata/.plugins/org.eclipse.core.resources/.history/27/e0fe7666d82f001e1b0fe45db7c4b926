@@ -1,0 +1,21 @@
+package week1.day1.exceptions;
+
+public class ExceptionsPractice {
+
+	public static int divide(int x, int y) {
+		return x / y;
+	}
+	
+	public static void main(String[] args) {
+		// try/catch block
+		try {
+			// Code that "could" break goes here
+			int x = divide(5, 0);
+		} catch (ArithmeticException e) {
+			// Handle the "bad" outcome
+			// Put code that handles the edge cases
+			System.out.println("Cannot divide by zero");
+		}
+		System.out.println("Program finished");
+	}
+}

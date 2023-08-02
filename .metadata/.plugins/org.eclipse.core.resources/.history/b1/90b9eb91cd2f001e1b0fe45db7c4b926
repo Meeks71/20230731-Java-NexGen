@@ -1,0 +1,12 @@
+package week1.day1.abstraction;
+
+public class Car implements Driveable {
+
+	@Override
+	public void speak() {
+		
+	}
+	
+	public void drive(int miles) {
+	}
+}

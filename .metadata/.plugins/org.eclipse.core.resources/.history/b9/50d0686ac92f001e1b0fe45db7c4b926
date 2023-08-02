@@ -1,0 +1,12 @@
+package week1.day1.inheritance;
+
+public class GoldenRetriever extends Dog {
+	
+	// This is the default constructor
+	
+	public static void main(String[] args) {
+		GoldenRetriever levi = new GoldenRetriever();
+		
+		System.out.println(levi.name);
+	}
+}

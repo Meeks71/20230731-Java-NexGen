@@ -1,0 +1,8 @@
+package week1.day3;
+
+// Singleton one copy of the object EVER exists
+// Lends itself to multithreading
+// If it is "stateful", you need take precautions to ensure thread safety
+public class Singleton {
+
+}

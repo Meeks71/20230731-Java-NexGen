@@ -1,0 +1,6 @@
+package week1.day1.abstraction;
+
+public interface Driveable {
+
+	// Needs the ability to drive
+}

@@ -1,0 +1,7 @@
+package week1.day2;
+
+public class Musician {
+
+	private String name;
+	private Instrument instrument;
+}

@@ -1,0 +1,6 @@
+package week1.day3;
+
+// Singleton one copy of the object EVER exists
+public class Singleton {
+
+}

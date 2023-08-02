@@ -1,0 +1,9 @@
+package week1.day1.exceptions;
+
+public class ExceptionsPractice {
+
+	
+	public static void main(String[] args) {
+		int x = 5 / 0;
+	}
+}

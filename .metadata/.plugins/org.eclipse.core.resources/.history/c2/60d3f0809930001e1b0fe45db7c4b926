@@ -1,0 +1,6 @@
+package week1.day2;
+
+public class Employee {
+
+	private long employeeId;
+}

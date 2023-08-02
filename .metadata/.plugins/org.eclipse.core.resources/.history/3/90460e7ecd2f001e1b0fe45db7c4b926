@@ -1,0 +1,11 @@
+package week1.day1.abstraction;
+
+public class Car implements Driveable {
+
+	public void drive() {
+		
+	}
+	
+	public void drive(int miles) {
+	}
+}

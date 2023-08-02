@@ -1,0 +1,9 @@
+package week1.day1.abstraction;
+
+public class Bicycle {
+
+	public Bicycle() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

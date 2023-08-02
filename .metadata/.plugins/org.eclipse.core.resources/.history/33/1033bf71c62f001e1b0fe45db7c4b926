@@ -1,0 +1,35 @@
+package week1.day1.inheritance;
+
+public class Dog {
+
+	// Properties
+	String name;
+	String breed;
+	int age;
+	
+	Dog() {
+		this.name = "Spot";
+		this.breed = "Pitbull";
+		this.age = 1;
+	}
+	
+	Dog(String name, String breed) {
+		
+	}
+	
+	// Creation of the dog (Constructors)
+	Dog(String n, String breed, int age) {
+		name = n;
+		this.breed = breed;
+		this.age = age;
+	}
+	
+	// What can a dog do? (Functions/Methods)
+	
+	public static void main(String[] args) {
+		Dog levi = new Dog("Levi", "Golden Retriever", 2);
+		Dog dog = new Dog();
+		
+		Dog lucy = new Dog("Lucy", "Golden Retriever");
+	}
+}

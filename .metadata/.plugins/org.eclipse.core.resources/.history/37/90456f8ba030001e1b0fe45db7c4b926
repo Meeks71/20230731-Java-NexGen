@@ -1,0 +1,7 @@
+package week1.day2.threading;
+
+public class ThreadCounting {
+	
+	int count = 0;
+
+}

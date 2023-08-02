@@ -1,0 +1,14 @@
+package week1.day3;
+
+public class Chef implements Runnable {
+
+	private String name;
+	private String food;
+	private int cookTime;
+	
+	@Override
+	public void run() {
+		// Cook the item based off the cook time
+		// Place it on the expo instantly
+	}
+}

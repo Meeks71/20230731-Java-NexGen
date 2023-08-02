@@ -1,0 +1,22 @@
+package week1.day1.inheritance;
+
+public abstract class Animal {
+
+	String name;
+	String breed;
+	int age;
+	
+	public Animal() {
+		
+	}
+
+	public Animal(String name, String breed, int age) {
+		super();
+		this.name = name;
+		this.breed = breed;
+		this.age = age;
+	}
+	
+	// Any animal should be able to speak
+	public void speak();
+}

@@ -1,0 +1,87 @@
+package week1.day2;
+
+public class Musician {
+
+	private String name;
+	private int age;
+	private Instrument instrument;
+
+	public Musician() {
+		super();
+	}
+
+	public Musician(String name, int age, Instrument instrument) {
+		super();
+		this.name = name;
+		this.age = age;
+		this.instrument = instrument;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public Instrument getInstrument() {
+		return instrument;
+	}
+
+	public void setInstrument(Instrument instrument) {
+		this.instrument = instrument;
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + age;
+		result = prime * result + ((instrument == null) ? 0 : instrument.hashCode());
+		result = prime * result + ((name == null) ? 0 : name.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (this.getClass() != obj.getClass()) // Must both be Musician class
+			return false;
+		Musician other = (Musician) obj;
+		if (age != other.age)
+			return false;
+		if (instrument == null) {
+			if (other.instrument != null)
+				return false;
+			// By default, instrument.equals is Object's .equals()
+		} else if (!instrument.equals(other.instrument))
+			return false;
+		if (name == null) {
+			if (other.name != null)
+				return false;
+		} else if (!name.equals(other.name))
+			return false;
+		// if it passes all checks, they are the same
+		return true;
+	}
+	
+//	@Override
+//	public boolean equals(Object obj) {
+//		return this == obj; // comparing memory addresses
+//	}
+	
+	
+
+}

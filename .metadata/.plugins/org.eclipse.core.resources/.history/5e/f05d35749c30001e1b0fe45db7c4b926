@@ -1,0 +1,21 @@
+package week1.day2;
+
+import java.util.LinkedList;
+import java.util.List;
+
+public class MyList<T> {
+
+	T data;
+	
+	public T getData() {
+		return data;
+	}
+	
+	public static void main(String[] args) {
+		List<Musician> mylist = new LinkedList<>();
+		MyList<LinkedList<Instrument>> myList = new MyList<>();
+		MyList<Employee> myOtherList = new MyList<>();
+		
+		myList.getData();
+	}
+}

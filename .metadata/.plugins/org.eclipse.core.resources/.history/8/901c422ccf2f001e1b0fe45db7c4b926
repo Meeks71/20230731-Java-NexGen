@@ -1,0 +1,16 @@
+package week1.day1.abstraction;
+
+/**
+ *
+ * Interfaces vs Abstract Classes
+ *
+ */
+public interface Driveable {
+
+	// Needs the ability to drive
+	public void drive();
+	// Needs the ability to drive for x amount of miles
+	public void drive(int miles);
+	
+	
+}

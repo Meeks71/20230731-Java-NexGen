@@ -1,0 +1,27 @@
+package week1.day2;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
+
+public class MyList<T extends Musician> {
+
+	T data;
+	
+	public T getData() {
+		return data;
+	}
+	
+	public static void main(String[] args) {
+		List<Musician> mylist = new ArrayList<>();
+		MyList<Musician> myList = new MyList<>();
+//		MyList<Employee> myOtherList = new MyList<>();
+//		
+//		MyList<Object> anotherList = new MyList<Object>();
+		HashMap<String, Employee> emps = new HashMap<>();
+		
+		myList.getData();
+	}
+}

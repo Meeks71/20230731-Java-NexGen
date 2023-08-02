@@ -1,0 +1,20 @@
+package week1.day1.inheritance;
+
+public class GoldenRetriever extends Dog {
+	
+	// This is the default constructor
+	public GoldenRetriever() {
+		// Calls the parent constructor
+		// Dog()
+		super("Goldy", "Golden Retriever", 5);
+	}
+	
+	// Method Overriding
+	
+	public static void main(String[] args) {
+		GoldenRetriever levi = new GoldenRetriever();
+		
+		System.out.println(levi.name);
+		levi.speak();
+	}
+}

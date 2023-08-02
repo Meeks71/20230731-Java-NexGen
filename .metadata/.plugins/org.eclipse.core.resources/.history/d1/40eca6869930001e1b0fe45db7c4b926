@@ -1,0 +1,11 @@
+package week1.day2;
+
+public class Employee {
+
+	private long employeeId;
+	private String name;
+	
+	public static void main(String[] args) {
+		
+	}
+}
