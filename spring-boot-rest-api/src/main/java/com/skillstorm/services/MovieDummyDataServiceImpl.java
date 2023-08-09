@@ -14,26 +14,39 @@ public class MovieDummyDataServiceImpl implements MovieService {
 
 	@Override
 	public Movie findById(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		return movies.stream().filter(movie -> movie.getId() == id).findFirst().orElse(null);
 	}
 
 	@Override
 	public List<Movie> findAll() {
-		// TODO Auto-generated method stub
 		return movies;
 	}
 
 	@Override
 	public Movie create(Movie movie) {
-		movies.add(movie);
-		return movie;
+		// make sure unique id
+		int id = movie.getId();
+		long count = movies.stream().filter(data -> data.getId() == id).count();
+		if (count > 0) {
+			// TODO create a custom exception to throw here
+			throw new RuntimeException("Create failed. Movie with id " + id + " already exists. Id must be unique.");
+		} else {
+			movies.add(movie);
+			return movie;
+		}
 	}
 
 	@Override
 	public Movie update(Movie movie, int id) {
-		// TODO make them use the id to specify which to update
-		return null;
+		movie.setId(id); // make sure to use the id specified 
+		int index = movies.indexOf(movie); // assuming .equals is defined to only compare id
+		if (index >= 0) {
+			movies.set(index, movie);
+			return movie;
+		} else {
+			// TODO create a custom exception
+			throw new RuntimeException("Update failed. No movie with id " + id + " was found.");
+		}
 	}
 
 	@Override
