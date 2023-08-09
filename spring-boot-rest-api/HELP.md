@@ -75,6 +75,48 @@ Now you can see your application is running, let's create a web api that returns
     | PUT | /movies/v1/{id} |
     | DELETE | /movies/v1/{id} |
 
+3. We created a Service layer consisting of a MovieService interface and concrete classes that implement MovieService. 
+
+    For today, we just made a MovieDummyDataServiceImpl class with an ArrayList to hold the data we POST. 
+    
+    Tomorrow we will add a persistence layer using Spring data JPA.
+
+4. To improve our Controller class, we played around with changing the status code returned in the HTTP Response.
+
+- POST /movies/v1 success status code changed to 201 CREATED
+
+```java
+    @PostMapping 
+	@ResponseStatus(code = HttpStatus.CREATED)
+	public Movie create(@RequestBody Movie movie) {
+		logger.debug("Movie handed in was " + movie);
+		return service.create(movie);
+	}
+```
+
+- DELETE /movies/v1/{id} success status code changed to 204 NO_CONTENT
+
+```java
+    @DeleteMapping("/{id}") // localhost:8080/movies/v1/128
+	@ResponseStatus(code = HttpStatus.NO_CONTENT)
+	public void delete(@PathVariable int id) { 
+		service.delete(id);
+	}
+	
+```
+- GET /movies/v1/{id} when no movie with that id, instead of 200 OK with empty body use 404 NOT FOUND 
+
+```java
+    @GetMapping("/{id}") // localhost:8080/movies/v1/128
+	public ResponseEntity<Movie> findById(@PathVariable int id) {
+		Movie movie = service.findById(id);
+		if (movie == null)
+			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+		return new ResponseEntity<>(movie, HttpStatus.OK);
+	}
+```
+
+Note: Tomorrow we can change the servcie to throw an exception when the id isn't found and configure a GlobalExceptionHandler to change the response code and message for us.
 
 ### Reference Documentation
 For further reference, please consider the following sections:
