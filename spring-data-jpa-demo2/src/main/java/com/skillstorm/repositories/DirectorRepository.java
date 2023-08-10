@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.skillstorm.models.Director;
 
 @Repository
-public interface DirectoryRepository extends JpaRepository<Director, Integer>{
+public interface DirectorRepository extends JpaRepository<Director, Integer>{
 
 }
